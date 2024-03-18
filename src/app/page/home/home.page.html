@@ -1,0 +1,19 @@
+
+<ion-header>
+  <app-profile></app-profile>
+</ion-header>
+
+<ion-content>
+  <ion-item fill="solid">
+    <ion-label position="floating">Search</ion-label>
+    <ion-input type="text"[(ngModel)]="searchInput" (ionChange)="searchItems()"></ion-input>
+  </ion-item>
+      <div *ngFor="let project of pro">
+        <ion-card  (click)="navigateToProject(project)"> 
+          <app-item [project]="project"></app-item>
+        </ion-card>
+      </div>
+</ion-content>
+
+
+
